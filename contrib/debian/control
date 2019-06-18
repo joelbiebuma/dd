@@ -1,0 +1,70 @@
+Source: cadex
+Section: utils
+Priority: optional
+Maintainer: Holger Schinzel <holger@cadexcoin.tech>
+Uploaders: Holger Schinzel <holger@cadexcoin.tech>
+Build-Depends: debhelper,
+ devscripts,
+ automake,
+ libtool,
+ bash-completion,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libevent-dev,
+ libboost-system1.48-dev | libboost-system-dev (>> 1.47),
+ libboost-filesystem1.48-dev | libboost-filesystem-dev (>> 1.47),
+ libboost-program-options1.48-dev | libboost-program-options-dev (>> 1.47),
+ libboost-thread1.48-dev | libboost-thread-dev (>> 1.47),
+ libboost-test1.48-dev | libboost-test-dev (>> 1.47),
+ libboost-chrono1.48-dev | libboost-chrono-dev (>> 1.47),
+ libminiupnpc8-dev | libminiupnpc-dev,
+ qt4-qmake, libqt4-dev,
+ qttools5-dev-tools, qttools5-dev,
+ libqrencode-dev,
+ libprotobuf-dev, protobuf-compiler,
+ python,
+ libzmq3-dev
+Standards-Version: 3.9.2
+Homepage: https://www.cadexcoin.tech/
+Vcs-Git: git://github.com/cadexproject/cadex.git
+Vcs-Browser: https://github.com/cadexproject/cadex
+
+Package: cadexd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Cadex is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cadex uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Cadex Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides the daemon, cadexd, and the CLI tool
+ cadex-cli to interact with the daemon.
+
+Package: cadex-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Cadex is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cadex uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Cadex Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides Cadex-Qt, a GUI for Cadex based on Qt.
+
+Package: cadex-tx
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer digital currency - standalone transaction tool
+ Cadex is an experimental new digital currency that enables anonymous, instant
+ payments to anyone, anywhere in the world. Cadex uses peer-to-peer
+ technology to operate with no central authority: managing transactions
+ and issuing money are carried out collectively by the network. Cadex Core
+ is the name of the open source software which enables the use of this currency.
+ .
+ This package provides cadex-tx, a command-line transaction creation
+ tool which can be used without a cadex daemon.  Some means of
+ exchanging minimal transaction data with peers is still required.
