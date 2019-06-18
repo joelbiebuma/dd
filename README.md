@@ -1,4 +1,4 @@
-Cadex Core staging tree 0.14.0
+Cadex Core staging 
 ===============================
 
 `master:` [![Build Status](https://travis-ci.org/cadexproject/cadex.svg?branch=master)](https://travis-ci.org/cadexproject/cadex) `develop:` [![Build Status](https://travis-ci.org/cadexproject/cadex.svg?branch=develop)](https://travis-ci.org/cadexproject/cadex/branches)
